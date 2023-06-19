@@ -15,6 +15,6 @@ from .model_utils import *
 from .setup_env import *
 from .visualize import *
 from .visualize_object_pose import *
-from .visualize_human_pose import *
+# from .visualize_human_pose import *
 from .object_pose_utils import *
-from .plots import *
+# from .plots import *

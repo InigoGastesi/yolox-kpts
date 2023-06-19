@@ -112,7 +112,7 @@ class Trainer:
             object_pose = self.args.task=="object_pose"
             f = os.path.join(self.file_name, f'epoch_{self.epoch}_train_batch{self.iter}.png')  # filename
             if not object_pose:
-                plots.plot_images(inps, targets, fname=f, human_pose=human_pose, object_pose=object_pose)
+                plots.plot_images(inps, targets, fname=f, human_pose=human_pose, object_pose=object_pose, dataset=self.train_loader.dataset._dataset)
             else:
                 plots.plot_images(inps, targets, fname=f, human_pose=human_pose, object_pose=object_pose, dataset=self.train_loader.dataset._dataset, data_index=data_index)
         with torch.cuda.amp.autocast(enabled=self.amp_training):
